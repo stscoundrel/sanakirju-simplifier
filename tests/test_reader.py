@@ -21,8 +21,8 @@ def test_reads_xml_files() -> None:
     results = reader.read_xml_files()
 
     # Each read file should contain dictionary xml with dictionary entries.
-    for result in results:
-        assert "<Dictionary" in result
-        assert "</Dictionary>" in result
-        assert "<DictionaryEntry" in result
-        assert "</DictionaryEntry>" in result
+    for _, contents in results:
+        assert "<Dictionary" in contents
+        assert "</Dictionary>" in contents
+        assert "<DictionaryEntry" in contents
+        assert "</DictionaryEntry>" in contents
