@@ -26,6 +26,10 @@ def test_writes_files_to_build():
 
     # Files should not exist beforehand.
     for destination, _ in destinations:
+        if exists(destination):
+            remove(destination)
+
+    for destination, _ in destinations:
         assert not exists(destination)
 
     # Just save unedited, freshly opened files in new location.
