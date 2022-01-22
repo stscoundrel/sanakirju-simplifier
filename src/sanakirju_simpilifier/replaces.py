@@ -4,15 +4,11 @@ from .types import File, Files
 regex_replaces = [
     "<RangeOfApplication[^>]*>",
     "<Fragment[^>]*>",
-    "<SeeAlso[^>]*>",
-    "<Ptr[^>]*>",
 ]
 
 replaces = [
     "</RangeOfApplication>",
     "</Fragment>",
-    "</SeeAlso>",
-    "</Ptr>",
 ]
 
 
