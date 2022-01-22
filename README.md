@@ -5,6 +5,7 @@ Simplify [Sanakirju](https://github.com/stscoundrel/sanakirju) XML dataset for e
 ### Usage
 
 `pipenv install`
+
 `pipenv run python main.py`
 
 Will generate simplified XML dataset in `src/sanakirju_simplifier/build`
