@@ -2,6 +2,13 @@
 
 Simplify [Sanakirju](https://github.com/stscoundrel/sanakirju) XML dataset for easier parsing.
 
+### Usage
+
+`pipenv install`
+`pipenv run python main.py`
+
+Will generate simplified XML dataset in `src/sanakirju_simplifier/build`
+
 ### Motivation
 
 The original dataset Sanakirju uses is huge and deeply nested set of XML. Automatically parsing it using common Node.js libraries causes some incorrectly parsed data. One example of these parsing issues would be additional XML-element inside XML-text content. Most parsers pop the element out as its own element, which makes it quite tricky to place its text content back in correct location.
