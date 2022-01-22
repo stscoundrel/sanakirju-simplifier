@@ -1,4 +1,5 @@
 import re
+from .types import File, Files
 
 regex_replaces = [
     "<RangeOfApplication[^>]*>",
@@ -15,7 +16,7 @@ replaces = [
 ]
 
 
-def simplify_file(file: tuple[str, str]) -> tuple[str, str]:
+def simplify_file(file: File) -> File:
     path, content = file
     for replace in replaces:
         content = content.replace(replace, "")
@@ -26,5 +27,5 @@ def simplify_file(file: tuple[str, str]) -> tuple[str, str]:
     return (path, content)
 
 
-def simplify_files(files: list[tuple[str, str]]) -> list[tuple[str, str]]:
+def simplify_files(files: Files) -> Files:
     return list(simplify_file(file) for file in files)
